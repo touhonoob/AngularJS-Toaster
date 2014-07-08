@@ -113,6 +113,7 @@ function ($compile, $timeout, $sce, toasterConfig, toaster) {
                     scope.toasters.push(toast);
                     if (mergedConfig['limit'] > 0 && scope.toasters.length > mergedConfig['limit']) {
                         scope.toasters.shift();
+                        scope.$digest();
                     }
                 }
             }
